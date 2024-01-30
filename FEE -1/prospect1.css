@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+:root {
+    --primary-color: #ff7613;
+    --text-color: #727171;
+}
+
+html{font-size: 10px;}
+
+body{font-family:Inter, sans-serif;
+background-color: black;
+color: white;}
+
+/* common styles */
+img{
+    width:100%;
+}
+
+a{
+
+    text-decoration: none;
+    color: white;
+}
+
+.description{
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.downloadBtn{
+    display: block;
+    text-decoration: underline;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.title{
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.downloadBtn:hover{
+    color:var(--primary-color);
+}
+
+.item_preTitle{
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight:300;
+}
+
+.item_title{
+    font-size:1.6rem;
+    color: azure;
+    font-weight: 500;
+    margin: 0.8rem 0;
+}
+
+.item_subtitle{
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 400;
+}
+/* layouts */
+.container{
+    max-width: 1000px;
+    width: 0 auto;
+    margin:0 auto;
+    display: grid;
+    padding:5rem;  /*1rem=16pixels by default and it represents the font size of the root element and root by default is html*/
+    background: #070707;
+    grid-template-columns:1fr 1fr;
+    gap:4rem;
+    align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+	.container {
+		width: 100%;
+		grid-template-columns: 1fr;
+		padding: 3rem;
+		gap: 7rem;
+	}
+}
+
+.profile{
+    grid-column: 1/-1; /*this is used so that profile can occupy two columns*/
+    margin-bottom: 3rem;
+}
+
+.group-1{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+}
+
+.group-2{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+}
+
+.group-3{
+    display: flex;
+    grid-column: 1/-1;
+    flex-direction: row;
+    gap: 5rem;
+}
+
+.group-3>div{
+    flex: 1;
+}
+
+@media only screen and (max-width: 768px) {
+	.profile {
+		margin-bottom: 0;
+	}
+	.group-3 {
+		flex-direction: column;
+	}
+}
+/*profile*/
+.profile_container{
+    display: flex;
+    gap: 2rem;
+}
+
+.profile_img{
+    max-width: 250px;
+}
+
+.Fname{
+    color:azure;
+    font-weight:200;
+    text-transform: uppercase;
+    font-size: clamp(2rem, 8vw, 4rem); /*clamp is used to set the minimum and maximum font size with dynamic size scaling*/
+    display: block;   /*display: block is used display an element likr a block, it stars on a new line and takes the whole width*/
+    margin-bottom: -0.8rem;
+}
+
+.Lname{
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: clamp(2.5rem,15vw, 7rem);
+    text-transform: uppercase;
+    display: block;
+}
+
+.profile_title{
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase; /*How thick or thin characters should be displayed*/
+}
+
+@media only screen and (max-width: 760px){
+    .profile_container{
+        flex-direction: column;
+    }
+}
+/*Hobbies*/
+.Hobbies_list{
+    margin-top: 1rem;
+    margin-left: 2rem;
+    line-height: 2;
+}
+
+/*Experience*/
+.Experience_item{
+    margin-top: 0%;
+}
+.Experience_name{
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+/*Education*/ 
+.edu_item{
+    margin-top:2rem;
+}
+
+/*Expertise*/
+.exp_list{
+    margin-top: 1rem;
+    margin-left: 2rem;
+    line-height: 2;
+    color: var(--text-color);
+}
+
+/*Interests*/
+.intItems{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.intElement{
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--text-color);
+}
+
+/*socials*/
+.socialItems{
+    margin-top: 2rem;
+}
+
+.socialItem{
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    color: var(--text-color);
+}
+
+.socialItem:hover{
+    color: var(--primary-color);
+}
+
+hr{
+    grid-column: 1/-1;
+    width:80% ;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+	hr {
+		margin: 0 auto;
+	}
+}
