@@ -1,1 +1,1 @@
-This is a repository for my Front-end project
+This is a repository for my Front-end project.
